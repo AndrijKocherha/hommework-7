@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/nullstyle.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>task5</title>
+  </head>
+  <body>
+    <main class="page">
+      <div class="page__container">
+        <div class="task">
+          <div class="task__condition text">Задача 5. Створити окремі функції, які переводять: 1) Сантиметри у дюйми; 2) Кілограми у фунти; 3) Кілометри у милі.</div>
+        </div>
+        <script>
+          let getInchesFromCentimeters = (centimeters, oneInch) => centimeters * oneInch
+          let getPhoundsFromKilograms = (kilograms, onePhound) => kilograms * onePhound
+          let getMilesFromKilometers = (kilometers, oneMile) => kilometers * oneMile
+          let userCentimeters = parseInt(prompt("введіть кількість сантиметрів"))
+          let userKilograms = parseInt(prompt("Введіть кількість кілограмів"))
+          let userKilometers = parseInt(prompt("Введіть кількість кілометрва"))
+          // =======
+          let userInches = getInchesFromCentimeters(userCentimeters, 0.39)
+          let userPhounds = getPhoundsFromKilograms(userKilograms, 2.2)
+          let userMiles = getMilesFromKilometers(userKilometers, 0.62)
+          // вивід
+          document.write(`${userCentimeters} сантиметрів = ${userInches.toFixed(2)} дюймів <br/>
+           ${userKilograms} кілограмів = ${userPhounds.toFixed(2)} фунтів <br/>
+           ${userKilometers} кілометрів = ${userMiles.toFixed(2)} миль 
+           `)
+        </script>
+      </div>
+    </main>
+  </body>
+</html>

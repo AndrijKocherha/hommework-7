@@ -1,0 +1,39 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/nullstyle.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>task10</title>
+  </head>
+  <body>
+    <main class="page">
+      <div class="page__container">
+        <div class="task">
+          <div class="task__condition text">
+            Задача 10. Дано покази температур (довільна кількість). Розробити функцію, яка дозволить знайти середнє значення для додатних показів температури.
+          </div>
+        </div>
+        <script>
+          function getAvarageForPosiTiveTemperature(temperaturesAmount) {
+            let amountOfPosistiveTemperature = 0
+            let sumOfPositiveTemperature = 0
+            for (let i = 0; i < temperaturesAmount; i++) {
+              let userTemperature = parseFloat(prompt("Введіть температуру"))
+              if (userTemperature > 0) {
+                amountOfPosistiveTemperature++
+                sumOfPositiveTemperature += userTemperature
+              }
+            }
+            let avarageTamp = sumOfPositiveTemperature / amountOfPosistiveTemperature
+            return avarageTamp
+          }
+          let userTemperaturesAmount = parseInt(prompt("Введіть зі скількох температур буде братись середнє додатнє"))
+          let avarageForPosiTiveTemperature = getAvarageForPosiTiveTemperature(userTemperaturesAmount)
+          document.write(`середнє серед додатніх = ${avarageForPosiTiveTemperature}`)
+        </script>
+      </div>
+    </main>
+  </body>
+</html>

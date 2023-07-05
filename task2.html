@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/nullstyle.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>task2</title>
+  </head>
+  <body>
+    <main class="page">
+      <div class="page__container">
+        <div class="task">
+          <div class="task__condition text">Задача 2. Створити функцію, яка за номером дня дозволяє з’ясувати чи є цей день робочим.</div>
+        </div>
+        <script>
+          let getTypeOfDay = (dayNumber) => {
+            let dayType
+            if (dayNumber < 1 || dayNumber > 7) dayType = "некоректні дані"
+            else if (dayNumber <= 5) dayType = "Робочий День"
+            else if (dayNumber <= 7) dayType = "Вихідний день"
+            return dayType
+          }
+          let userDayNum = parseInt(prompt("Віедіть номер дня тижня від 1 до 7"))
+          alert(getTypeOfDay(userDayNum))
+        </script>
+      </div>
+    </main>
+  </body>
+</html>

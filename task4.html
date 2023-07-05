@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/nullstyle.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>task4</title>
+  </head>
+  <body>
+    <main class="page">
+      <div class="page__container">
+        <div class="task">
+          <div class="task__condition text">
+            Задача 4. Створити функцію, яка для 3 заданих чисел знаходить одночасно декілька результатів: кількість парних, кількість додатних, кількість більших за 100.
+          </div>
+        </div>
+        <script>
+          alert("як я розумію краще було б робити 2 окремі функції по знаходженню парних і додатніх чисел (але задача каже 1)")
+          function getInfoAboutNumbers(a, b, c) {
+            let amountOfEvenNumbers = 0
+            let amountOfPositiveNumbers = 0
+            if (a % 2 === 0) amountOfEvenNumbers++
+            if (b % 2 === 0) amountOfEvenNumbers++
+            if (c % 2 === 0) amountOfEvenNumbers++
+            if (a > 0) amountOfPositiveNumbers++
+            if (b > 0) amountOfPositiveNumbers++
+            if (c > 0) amountOfPositiveNumbers++
+            return [amountOfEvenNumbers, amountOfPositiveNumbers]
+          }
+          let userNum1 = parseFloat(prompt(`введіть будь яке число`))
+          let userNum2 = parseFloat(prompt(`введіть будь яке число`))
+          let userNum3 = parseFloat(prompt(`введіть будь яке число`))
+          let result = getInfoAboutNumbers(userNum1, userNum2, userNum3)
+          document.write(`парних${result[0]} <br/> додатніх ${result[1]}`)
+        </script>
+      </div>
+    </main>
+  </body>
+</html>
